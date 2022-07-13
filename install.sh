@@ -2,6 +2,12 @@
 
 THEME_DIR='usr/share/grub/themes'
 
+ROOT_UID=0
+if [[ ! "${UID}" -eq "${ROOT_UID}" ]]; then
+    echo 'Run as root.'
+    exit 1
+fi
+
 if [[ ! -d "${THEME_DIR}/ortho_theme" ]]; then
 	mkdir -p "${THEME_DIR}/ortho_theme"
 	cp -a ./theme/* "${THEME_DIR}/ortho_theme"
