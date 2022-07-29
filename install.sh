@@ -1,6 +1,6 @@
 #!/bin/bash
 
-THEME_DIR='usr/share/grub/themes'
+THEME_DIR='/usr/share/grub/themes'
 
 ROOT_UID=0
 if [[ ! "${UID}" -eq "${ROOT_UID}" ]]; then
